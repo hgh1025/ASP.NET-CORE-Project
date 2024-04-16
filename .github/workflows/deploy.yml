@@ -1,0 +1,19 @@
+name: deploy-github-actions
+run-name: ${{github.action}} deploy experience
+
+on:
+ push:
+  branches: [ master ]
+ pull_request:
+  branches: [ master ]
+
+jobs:
+ build:
+  runs-on: windows-latest
+  
+  steps:
+   -uses: action/checkout@v2
+   
+   -name: Run a script
+    run: echo hello, world!
+    
